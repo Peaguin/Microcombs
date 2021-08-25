@@ -4,12 +4,12 @@ import time
 # create device handle
 cw = cwave.CWave()
 # connect to device
-#cw.connect('192.168.202.41')
+cw.connect('192.168.202.41')
 # The C-WAVE laser only accepts one connection at a time, but you can
 # connect to 'localhost' while beeing connected via C-WAVE Control
 # to use both your python program and C-WAVE Control in parallel
 # via C-WAVE Control's connection multiplexing feature:
-cw.connect('localhost')
+#cw.connect('localhost')
 print('C-WAVE connected')
 # dial IR wavelength 1100nm but also request SHG for 550nm
 #cw.dial(1100, True)
@@ -32,7 +32,7 @@ print('C-WAVE connected')
 #cw.set_piezo_mode(cwave.PiezoChannel.Opo, cwave.PiezoMode.ExtRamp)
 
 # sleep 10s
-time.sleep(10)
+#time.sleep(10)
 
 #
 # Moving the opo piezo manually via loop with wait time::
